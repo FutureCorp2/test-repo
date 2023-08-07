@@ -19,6 +19,10 @@ func main() {
 	d := b[4]
 	fmt.Println("d:", d)
 
+	if true {
+		fmt.Println("WOHO")
+	}
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello, %d!", UncoverFunc()+CoverFunc())
 	})
