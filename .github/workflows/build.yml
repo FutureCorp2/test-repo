@@ -34,6 +34,11 @@ jobs:
           go get github.com/securego/gosec/cmd/gosec
           gosec -no-fail -fmt=sonarqube -out report.json ./...
 
+      - name: GolangCI-Lint
+        uses: golangci/golangci-lint-action@v3
+        with:
+            args: --timeout=30m --out-format=checkstyle:golangci-lint-report.xml
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
