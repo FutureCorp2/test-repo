@@ -37,7 +37,7 @@ jobs:
       - name: GolangCI-Lint
         uses: golangci/golangci-lint-action@v3
         with:
-            args: --timeout=30m --issues-exit-code 0 --out-format=checkstyle:golangci-lint-report.xml
+            args: --timeout=25m --issues-exit-code 0 --out-format=checkstyle:golangci-lint-report.xml
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
