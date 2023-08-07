@@ -1,9 +1,32 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 
 func main() {
-	fmt.Println("Hello Guys", CoverFunc()+UncoverFunc())
+	a := [10]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	b := a[1:4]
+	fmt.Println("a:", a)
+	fmt.Println("b:", b)
+
+	// Works fine even though c is indexing past the end of b.
+	c := b[4:7]
+	fmt.Println("c:", c)
+
+	// This fails with panic: runtime error: index out of range [4] with length 3
+	d := b[4]
+	fmt.Println("d:", d)
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Hello, %d!", UncoverFunc()+CoverFunc())
+	})
+
+	err := http.ListenAndServe(":1234", nil)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func UncoverFunc() int {
