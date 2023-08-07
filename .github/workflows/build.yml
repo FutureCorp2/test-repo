@@ -16,7 +16,7 @@ jobs:
       - name: Create Coverage Output
         run: |
           go test --timeout=300s -coverprofile=cover.out -gcflags=all=-l ./... &&
-          ls -lah
+          pwd
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
