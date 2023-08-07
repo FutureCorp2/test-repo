@@ -18,3 +18,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: Create Coverage Output
+        run: go test --timeout=300s -coverprofile=cover.out -gcflags=all=-l ./...
+        shell: bash
