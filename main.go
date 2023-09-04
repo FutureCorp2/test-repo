@@ -28,7 +28,7 @@ func main() {
 	// }
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello, %d!", UncoverFunc()+CoverFunc())
+		fmt.Fprintf(w, "Hello, %d!", UncoverFunc()+CoverFunc()+AnotherCoverFunc())
 	})
 
 	err := http.ListenAndServe(":1234", nil)
@@ -43,4 +43,8 @@ func UncoverFunc() int {
 
 func CoverFunc() int {
 	return 15
+}
+
+func AnotherCoverFunc() int {
+	return 30
 }
