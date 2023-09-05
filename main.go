@@ -52,5 +52,39 @@ func ErrorFunc() int {
 	// 	fmt.Println("WOHO")
 	// }
 
+	/*
+		aksdfkakfankan
+		asdadnasdas
+		dasdadasasdas
+		asdadad
+		asdasd
+		asdas
+		dasd
+		asd
+		asdasdasdafmtdasd
+		asd
+		ad
+		ad
+		sad
+		sa
+		a
+
+		sdfmtd
+		asd
+		ad
+		as
+		dsa
+		da
+		da
+		d
+		afmtda
+		da
+
+		d
+		a
+
+
+	*/
+
 	return 0
 }
