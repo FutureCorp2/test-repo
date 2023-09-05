@@ -19,3 +19,9 @@ func TestAnotherCoverFunc(t *testing.T) {
 		assert.Equal(t, main.AnotherCoverFunc(), 30)
 	})
 }
+
+func TestErrorFunc(t *testing.T) {
+	t.Run("Just run for coverage", func(t *testing.T) {
+		assert.Equal(t, main.ErrorFunc(), 0)
+	})
+}
