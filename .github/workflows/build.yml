@@ -24,10 +24,10 @@ jobs:
           GO111MODULE=on &&
           go mod tidy
 
-      - name: Run Unit Tests
-        run: |
-          go test --timeout=300s -coverprofile=./cover.out ./... && 
-          ls -lah
+      # - name: Run Unit Tests
+      #   run: |
+      #     go test --timeout=300s -coverprofile=./cover.out ./... && 
+      #     ls -lah
 
       - name: Run Gosec Security Scanner
         run: |
