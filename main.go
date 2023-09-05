@@ -31,9 +31,9 @@ func AnotherCoverFunc() int {
 }
 
 func ErrorFunc() int {
-	// password := "aakbjkgbejanfn213j5n13n45l1n5"
+	password := "aakbjkgbejanfn213j5n13n45l1n5"
 
-	// fmt.Println("Password is: ", password)
+	fmt.Println("Password is: ", password)
 
 	// a := [10]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 	// b := a[1:4]
@@ -48,9 +48,9 @@ func ErrorFunc() int {
 	// d := b[4]
 	// fmt.Println("d:", d)
 
-	// if true {
-	// 	fmt.Println("WOHO")
-	// }
+	if true {
+		fmt.Println("WOHO")
+	}
 
 	/*
 		aksdfkakfankan
